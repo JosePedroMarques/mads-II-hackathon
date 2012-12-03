@@ -7,4 +7,7 @@ class MyTest(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    return
+        
+    suite = unittest.TestSuite()
+    suite.addTest(unittest.makeSuite(MyTest))
+    unittest.TextTestRunner(verbosity=2).run(suite)
